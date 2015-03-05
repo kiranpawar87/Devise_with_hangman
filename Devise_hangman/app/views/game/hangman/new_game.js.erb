@@ -1,0 +1,18 @@
+$('.wordFormed').html("<h2><%=escape_javascript(@wordFormed) %></h2>")
+$('.target').html("<h2><%= escape_javascript($goal) %></h2>")
+$('.input').val("")
+$('.attempt').html("<h4><%=escape_javascript($attempt.to_s()) %></h4>")
+$('.display').css("visibility","visible")
+//$('.attempt').html("<h4><%=escape_javascript($selected_cat.to_s()) %></h4>")
+
+var image_path="<%= asset_path('hangman0.gif')%>"
+$('.img > img').attr('src',image_path)
+
+$('.wonlose p').html(" <h3>wins:<%=escape_javascript(@winss.to_s()) %></h3>")
+$('.cat').html("<H1><%=escape_javascript($selected_cat) %></H2>")
+
+$('.print h1').html("<H1><%=escape_javascript($newgame) %></H2>")
+$('.print p').html("<h3><%=escape_javascript(@error) %></h3>")
+$('.print h6').html("<h3><%=escape_javascript($wrongattempt.to_s)%></h3>")
+
+

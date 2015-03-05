@@ -1,0 +1,56 @@
+.header
+  %h2 Welcome Admin
+  #tfheader
+  %form#tfnewsearch{:action => "http://www.google.com", :method => "get"}
+    %input.tftextinput{:maxlength => "120", :name => "q", :size => "21", :type => "text"}
+      %input.tfbutton{:type => "submit", :value => "search"}
+  .tfclear
+  .setting
+    %h3 Account
+    %h3=link_to 'Sign out', destroy_user_session_path
+.admin
+  .aside
+    %br/
+    Dashboard
+    %br/
+    %br/
+    %br/
+    = link_to "Manage Users", {:controller => "/users", :action => "manage"}
+    %br/
+    %br/
+    %br/
+    Users View
+    %br/
+    %br/
+    %br/
+    Setting
+  .display1
+    %h1 Edit User
+    = form_for("user",:url=>{:controller => "users",:action => "reset"} ) do |f|
+      %div
+      = f.label :'First Name:'
+      &nbsp;&nbsp;
+      = f.text_field :fname ,:value =>@fname
+      %br/
+      %br/
+      %div
+      = f.label :'Last Name'
+      &nbsp;&nbsp;&nbsp;&nbsp;
+
+      = f.text_field :lname ,:value =>@lname
+      %br/
+      %br/
+      %div
+      = f.label :'Username'
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      = f.text_field :uname ,:value =>@uname
+      %br/
+      %br/
+      %div
+      = f.label :'Email Name'
+      &nbsp;&nbsp;
+      = f.text_field :email ,:value =>@email
+      %br/
+      %br/
+      %div
+      = f.submit "Update"

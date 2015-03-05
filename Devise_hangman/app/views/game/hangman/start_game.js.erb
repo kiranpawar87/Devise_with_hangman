@@ -1,0 +1,12 @@
+$('.wordFormed').html("<h2><%= escape_javascript(@wordFormed.to_s()) %><h2>")
+
+$('.print p').html("<h3><%=escape_javascript(@error) %></h3>")
+$('.print h6').html("<h5>Attempted: <%=escape_javascript($wrongattempt.to_s)%></h5>")
+
+$('.input').val("")
+$('.attempt').html("<h4><%= escape_javascript($attempt.to_s()) %><h4>")
+var image_path="<%= asset_path @img %>"
+$('.img > img').attr('src',image_path)
+
+$('.wins').html(" Wins:<%=escape_javascript(@wins.to_s()) %>")
+$('.lose').html(" Lose:<%=escape_javascript(@lose.to_s()) %>")

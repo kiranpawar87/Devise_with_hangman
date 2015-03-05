@@ -1,0 +1,48 @@
+.header
+  .container
+    .row
+      .col-sm-4
+      .col-sm-4
+        %h1 Hangman
+      .col-sm-4
+        Welcome Admin
+    .row
+      .col-sm-2
+        = link_to "View Users", {:controller => "/users", :action => "list"}
+      .col-sm-2
+        = link_to "Manage Users", {:controller => "/users", :action => "manage"}
+      .col-sm-2
+        =link_to 'Play Game', {:controller=>"game/hangman",:action=>"admin_play"}
+      .col-sm-4
+      .col-sm-2
+        .dropdown
+          %button#menu1.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+            Account
+          %span.caret
+          %ul.dropdown-menu
+            %li
+              =link_to 'Log out', destroy_user_session_path
+.admin
+  .container
+    .row
+      .col-lg-6
+        %form{:role => "form"}
+          %input#name.form-control{:placeholder => "Search Users Name", :type => "text"}
+            %button.btn.btn-default{:type => "submit"} Submit
+      .col-lg-1
+  .set
+    %h1 User List
+    %table{:border => "1",:align => "center"}
+      %tr
+        %th First Name
+        %th Last Name
+        %th Username
+        %th email-id
+        %th User-type
+      -@posts.each do |post|
+        %tr
+          %td= post.fname
+          %td= post.lname
+          %td= post.uname
+          %td= post.email
+          %td= post.utype

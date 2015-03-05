@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3991152656">
+    <data-source source="LOCAL" name="Rails DEVICE: development" uuid="2fd26b3f-1f8d-4657-95d2-3ca706d03dd4">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/db/hangmanDb</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails DEVICE: test" uuid="f8a389be-3382-40fc-8afc-4949ac8f03f4">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/db/hangmanDb_test</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

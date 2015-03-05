@@ -1,0 +1,25 @@
+.header
+  %h1 Welcome into Hangman
+  %p This is Index page
+  .signout
+
+  -#.logo
+  -#  %img(src="http://localhost:3000/assets/logo.jpg")
+
+.signup
+  %br/
+  %h1 Home Page
+  %br/
+  %br/
+  = link_to 'Sign up as User', new_user_registration_path
+  %br/
+  %br/
+  %br/
+  %br/
+  = link_to 'Sign in as User', new_user_session_path
+.footer
+  %br/
+  %br/
+  =link_to 'Sign out', destroy_user_session_path
+  @ By using this site, you agree to the Terms of Use and Privacy Policy.
+  Hangman® is a registered trademark of the Hangman Foundation, Inc., a non-profit organization

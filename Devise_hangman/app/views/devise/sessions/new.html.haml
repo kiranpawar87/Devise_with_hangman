@@ -1,0 +1,42 @@
+.header
+  %h1 Hangman
+  %p Become genius
+  -#.logo
+  -#  %img(src="http://localhost:3000/assets/logo.jpg")
+.login
+  %br/
+  %br/
+  %h2 Sign in
+  %br/
+  = form_for(User.new, :as => resource_name, :url => session_path(resource_name)) do |f|
+    %div
+    = f.label 'Email id'
+    &nbsp;&nbsp;
+    = f.text_field :email
+    %br/
+    %br/
+    %div
+    =f.label :password
+    &nbsp;
+    =f.password_field :password
+    %br/
+    %br/
+    - if devise_mapping.rememberable?
+      %div
+      = f.check_box :remember_me
+      = f.label :remember_me
+    %br/
+    %br/
+    %div= f.submit "Sign in"
+    %br/
+    =flash.each do |key, value|
+      .alert{ :class => "alert-#{key}" }
+        -#%button.close{ :data => { :dismiss => "alert" } } x
+        %strong
+          = value
+  = render "devise/shared/links"
+.footer
+  %br/
+  %br/
+  @ By using this site, you agree to the Terms of Use and Privacy Policy.
+  Hangman® is a registered trademark of the Hangman Foundation, Inc., a non-profit organization.

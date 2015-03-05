@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails DEVICE: development" uuid="2fd26b3f-1f8d-4657-95d2-3ca706d03dd4">
+      <user-name>root</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+    </data-source>
+    <data-source name="Rails DEVICE: test" uuid="f8a389be-3382-40fc-8afc-4949ac8f03f4">
+      <user-name>root</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+    </data-source>
+  </component>
+</project>
